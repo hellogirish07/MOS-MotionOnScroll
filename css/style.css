@@ -364,10 +364,49 @@ nav .container {
     font-family: 'Courier New', monospace;
     font-size: 0.95rem;
     line-height: 1.8;
+    position: relative; /* allow absolute-positioned copy button */
 }
 
 .code-block code {
     color: #34d399;
+}
+
+/* Copy button for code blocks */
+.copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.55);
+    color: var(--white);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(0,0,0,0.7);
+    transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+@media (max-width: 480px) {
+    .copy-btn {
+        top: 8px;
+        right: 8px;
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
 }
 
 .code-block .comment {
