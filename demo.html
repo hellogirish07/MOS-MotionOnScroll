@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MotionOnScroll (MOS) - Demo</title>
+  <link rel="stylesheet" href="mos.css">
+  <link rel="stylesheet" href="/css/demo.css" class="css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="heading">🚀 MotionOnScroll (MOS) Demo</h1>
+
+  <a href="#heading" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <div class="container">
+    <!-- Fade animations -->
+    <section data-mos="fade-up">fade-up</section>
+    <section data-mos="fade-down">fade-down</section>
+    <section data-mos="fade-left">fade-left</section>
+    <section data-mos="fade-right" data-mos-delay="300">fade-right (delay 300ms)</section>
+
+    <!-- Slide Animations -->
+    <section data-mos="slide-up">slide-up</section>
+    <section data-mos="slide-down">slide-down</section>
+    <section data-mos="slide-left" data-mos-duration="800">slide-left (duration 800ms)</section>
+    <section data-mos="slide-right">slide-right</section>
+
+    <!-- Zoom Animations -->
+    <section data-mos="zoom-in" data-mos-duration="1200">zoom-in (duration 1200ms)</section>
+    <section data-mos="zoom-out">zoom-out</section>
+
+    <!-- Flip Animations -->
+    <section data-mos="flip-left">flip-left</section>
+    <section data-mos="flip-right">flip-right</section>
+    <section data-mos="flip-up">flip-up</section>
+    <section data-mos="flip-down">flip-down</section>
+
+    <!-- Rotate Animations -->
+    <section data-mos="rotate-in">rotate-in</section>
+    <section data-mos="rotate-in-right">rotate-in-right</section>
+    <section data-mos="rotate-zoom">rotate-zoom</section>
+
+    <!-- Bounce Animations -->
+    <section data-mos="bounce-up">bounce-up</section>
+    <section data-mos="bounce-down">bounce-down</section>
+
+    <!-- Skew Animations -->
+    <section data-mos="skew-in">skew-in</section>
+    <section data-mos="skew-out">skew-out</section>
+
+    <!-- Pop Animations -->
+    <section data-mos="pop-in">pop-in</section>
+    <section data-mos="pop-out">pop-out</section>
+
+    <!-- Blur Animations -->
+    <section data-mos="blur-in">blur-in</section>
+    <section data-mos="blur-out">blur-out</section>
+
+    <!-- Shake -->
+    <section data-mos="shake">shake</section>
+
+    <!-- Fade Zoom / Flip Zoom -->
+    <section data-mos="fade-zoom-in">fade-zoom-in</section>
+    <section data-mos="fade-zoom-out">fade-zoom-out</section>
+    <section data-mos="flip-zoom">flip-zoom</section>
+
+  </div>
+  <script src="mos.js"></script>
+</body>
+
+</html>

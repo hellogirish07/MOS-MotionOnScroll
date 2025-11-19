@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotionOnScroll (MOS) - Beautiful Scroll Animations Made Simple</title>
+
+  <meta name="description"
+    content="MotionOnScroll (MOS) is a lightweight JavaScript library that enables beautiful scroll animations with just a data attribute. No dependencies, easy to use, and highly customizable.">
+  <meta name="keywords"
+    content="MotionOnScroll, MOS, scroll animations, JavaScript animation library, web animations, lightweight JS library, no dependencies, easy to use, customizable animations">
+  <meta name="author" content="GK">
+
+  <link rel="stylesheet" href="mos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- font awausome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" class="css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="/Logos/nav-logo-lite.png" >
+      </div>
+      <!-- Hamburger button for mobile -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <!-- <span></span>
+        <span></span>
+        <span></span> -->
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#showcase">Examples</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="demo-btn" href="demo.html">Try Live Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content" data-mos="fade-up">
+      <div class="badge">🚀 Lightweight • Zero Dependencies</div>
+      <div class="hero-logo">
+        <img src="/Logos/nav-logo-dark.png" alt="MotionOnScroll Logo">
+      </div>
+      <p class="subtitle">Beautiful scroll animations made simple. Add stunning motion effects to your website with just
+        a data attribute.</p>
+      <div class="cta-buttons">
+        <a href="#install" class="btn btn-primary">Get Started</a>
+        <a href="demo.html" class="btn btn-secondary">View Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="/Logos/about-logo.png" alt="mos image ">
+    </div>
+    <div class="container" data-mos="fade-up">
+      <h2 class="about-title">What is MotionOnScroll (MOS)?</h2>
+      <p class="about-description">MotionOnScroll (MOS) is a lightweight JavaScript library that makes it incredibly
+        easy to add beautiful scroll animations to your web projects. With MOS, you can enhance user engagement and
+        create visually appealing experiences without the need for complex coding or heavy dependencies.</p>
+      <p class="about-description">Simply include the MOS CSS and JS files in your project, and add a
+        <code>data-mos</code> attribute to any HTML element you want to animate. Choose from a variety of animation
+        types such as fade, slide, zoom, flip, rotate, bounce, skew, pop, and blur effects. Customize the animation
+        duration and delay using additional data attributes for precise control over the animation behavior.
+      </p>
+      <p class="about-description">Whether you're building a portfolio, landing page, or any other web application, MOS
+        provides a simple yet powerful way to bring your content to life with smooth and engaging scroll animations.</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section">
+    <div class="stats">
+      <div class="stat-card" data-mos="fade-up" data-mos-delay="0">
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Animation Types</div>
+      </div>
+      <div class="stat-card" data-mos="fade-up" data-mos-delay="100">
+        <div class="stat-number">0KB</div>
+        <div class="stat-label">Dependencies</div>
+      </div>
+      <div class="stat-card" data-mos="fade-up" data-mos-delay="200">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Files Only</div>
+      </div>
+      <div class="stat-card" data-mos="fade-up" data-mos-delay="300">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Customizable</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <h2 class="section-title" data-mos="fade-up">Why Choose MotionOnScroll?</h2>
+    <p class="section-subtitle" data-mos="fade-up" data-mos-delay="100">Powerful, lightweight, and incredibly easy to
+      use</p>
+
+    <div class="features-grid">
+      <div class="feature-card" data-mos="fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+        <h3>Lightning Fast</h3>
+        <p>Built with performance in mind. Zero dependencies, minimal code, maximum impact. Your pages load fast and
+          animate smoothly.</p>
+      </div>
+
+      <div class="feature-card" data-mos="fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>Beautiful Animations</h3>
+        <p>12+ stunning animation types including fade, slide, zoom, and flip effects. Each animation is carefully
+          crafted for smoothness.</p>
+      </div>
+
+      <div class="feature-card" data-mos="fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-wrench"></i></div>
+        <h3>Easy to Use</h3>
+        <p>Just add a data attribute to any element. No JavaScript knowledge required. Customize delay and duration with
+          simple attributes.</p>
+      </div>
+
+      <div class="feature-card" data-mos="fade-up" data-mos-delay="100">
+        <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Fully Responsive</h3>
+        <p>Works perfectly on all devices and screen sizes. Animations adapt to your layout and provide consistent
+          experience everywhere.</p>
+      </div>
+
+      <div class="feature-card" data-mos="fade-up" data-mos-delay="100">
+        <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Intersection Observer</h3>
+        <p>Uses modern Intersection Observer API for efficient scroll detection. Animations trigger only when elements
+          are visible.</p>
+      </div>
+
+      <div class="feature-card" data-mos="fade-up" data-mos-delay="100">
+        <div class="feature-icon"><i class="fa-solid fa-magic"></i></div>
+        <h3>Customizable</h3>
+        <p>Control animation duration, delay, and behavior. Override defaults with CSS variables or data attributes for
+          fine-tuned control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Section -->
+  <section class="section" id="showcase">
+    <h2 class="section-title" data-mos="fade-up">Animation Showcase</h2>
+    <p class="section-subtitle" data-mos="fade-up" data-mos-delay="100">See all available animation types in action</p>
+
+    <div class="showcase">
+      <div class="showcase-grid">
+        <div class="showcase-item" data-mos="fade-up">
+          <h4>Fade Up</h4>
+          <code>data-mos="fade-up"</code>
+        </div>
+        <div class="showcase-item" data-mos="slide-up" data-mos-delay="100">
+          <h4>Slide Up</h4>
+          <code>data-mos="slide-up"</code>
+        </div>
+        <div class="showcase-item" data-mos="zoom-in" data-mos-delay="100">
+          <h4>Zoom In</h4>
+          <code>data-mos="zoom-in"</code>
+        </div>
+        <div class="showcase-item" data-mos="zoom-out" data-mos-delay="200">
+          <h4>Zoom Out</h4>
+          <code>data-mos="zoom-out"</code>
+        </div>
+        <div class="showcase-item" data-mos="flip-left" data-mos-delay="100">
+          <h4>Flip Left</h4>
+          <code>data-mos="flip-left"</code>
+        </div>
+        <div class="showcase-item" data-mos="flip-right" data-mos-delay="200">
+          <h4>Flip Right</h4>
+          <code>data-mos="flip-right"</code>
+        </div>
+        <div class="showcase-item" data-mos="flip-up" data-mos-delay="100">
+          <h4>Flip Up</h4>
+          <code>data-mos="flip-up"</code>
+        </div>
+        <div class="showcase-item" data-mos="flip-down" data-mos-delay="200">
+          <h4>Flip Down</h4>
+          <code>data-mos="flip-down"</code>
+        </div>
+        <div class="showcase-item" data-mos="rotate-in" data-mos-delay="100">
+          <h4>Rotate In</h4>
+          <code>data-mos="rotate-in"</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section class="section" id="install">
+    <h2 class="section-title" data-mos="fade-up">Get Started in Seconds</h2>
+    <p class="section-subtitle" data-mos="fade-up" data-mos-delay="100">Simple setup, powerful results</p>
+
+    <div class="installation" data-mos="zoom-in">
+      <h3 class="install-heading install-heading-first">1. Include the Files</h3>
+      <div class="code-block">
+        <code>&lt;link rel="stylesheet" href="mos.css"&gt;</code><br>
+        <code>&lt;script src="mos.js"&gt;&lt;/script&gt;</code>
+      </div>
+
+      <h3 class="install-heading install-heading-subsequent">2. Add Animation to Elements</h3>
+      <div class="code-block">
+        <code>&lt;div <span class="comment">data-mos="fade-up"</span>&gt;</code><br>
+        <code>&nbsp;&nbsp;Your content here</code><br>
+        <code>&lt;/div&gt;</code>
+      </div>
+
+      <h3 class="install-heading install-heading-subsequent">3. Customize (Optional)</h3>
+      <div class="code-block">
+        <code>&lt;div <span class="comment">data-mos="fade-up"</span></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">data-mos-delay="300"</span></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">data-mos-duration="1200"</span>&gt;</code><br>
+        <code>&nbsp;&nbsp;Your content here</code><br>
+        <code>&lt;/div&gt;</code>
+      </div>
+    </div>
+
+    <div class="cta-center" data-mos="fade-up">
+      <a href="demo.html" class="btn btn-primary cta-large">Try Live Demo</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2 class="section-title" data-mos="fade-up">Get in Touch</h2>
+    <p class="section-subtitle" data-mos="fade-up" data-mos-delay="100">Have questions? We'd love to hear from you</p>
+    
+    <div class="contact-container" data-mos="fade-up">
+      <form class="contact-form" id="contactForm" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="33d44239-b74e-45c4-be8a-5c9f3feaab1d">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary cta-large">Send Message</button>
+        <div id="result"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/Logos/nav-logo-dark.png" alt="">
+      </div>
+      <p class="footer-description">Beautiful scroll animations made simple</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#showcase">Examples</a>
+        <a href="#install">Installation</a>
+        <a href="demo.html">Demo</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 MotionOnScroll. Created with ❤️ by GK</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <!-- Mobile menu toggle script -->
+  <script src="js/script.js"></script>
+  <script src="mos.js"></script>
+</body>
+
+</html>
