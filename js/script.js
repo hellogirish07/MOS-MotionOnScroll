@@ -63,6 +63,53 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Add copy buttons to installation code blocks
+  (function addCopyButtons() {
+    const installationCodeBlocks = document.querySelectorAll('.installation .code-block');
+    installationCodeBlocks.forEach(cb => {
+      // create button
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Copy code');
+      btn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i> Copy';
+      cb.appendChild(btn);
+
+      btn.addEventListener('click', async () => {
+        // collect text from all <code> children
+        const codes = cb.querySelectorAll('code');
+        const text = Array.from(codes).map(c => c.innerText.replace(/\u00A0/g, ' ')).join('\n');
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+          btn.classList.add('copied');
+          const previous = btn.innerHTML;
+          btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Copied';
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = previous;
+          }, 1800);
+        } catch (err) {
+          btn.innerHTML = 'Failed';
+          setTimeout(() => {
+            btn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i> Copy';
+          }, 1400);
+        }
+      });
+    });
+  })();
+
 });
 
 // Contact form handler
