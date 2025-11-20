@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MotionOnScroll (MOS) - Beautiful Scroll Animations Made Simple</title>
 
+  <!-- favicon icon -->
+  <link rel="icon" type="image/png" href="Logos/about-logo.ico">
+
   <meta name="description"
     content="MotionOnScroll (MOS) is a lightweight JavaScript library that enables beautiful scroll animations with just a data attribute. No dependencies, easy to use, and highly customizable.">
   <meta name="keywords"
@@ -13,6 +16,7 @@
   <meta name="author" content="GK">
 
   <link rel="stylesheet" href="mos.css">
+  <link rel="stylesheet" href="css/style.css" class="css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -25,7 +29,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css" class="css">
 </head>
 
 <body>
@@ -70,8 +73,8 @@
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div class="about-img">
+  <section class="about" id="about" data-mos="fade-up">
+    <div class="about-img" data-mos="fade-up">
       <img src="/Logos/about-logo.png" alt="mos image ">
     </div>
     <div class="container" data-mos="fade-up">
@@ -219,7 +222,7 @@
     <div class="installation" data-mos="zoom-in">
 
       <!-- Step 1 -->
-      <h3 class="install-heading install-heading-first">1. Include the CDN</h3>
+      <h3 class="install-heading install-heading-first">1. Include the Files</h3>
       <div class="code-block">
         <code>&lt;link rel="stylesheet" href="https://motion-on-scroll.netlify.app/mos.css"&gt;</code><br>
         <code>&lt;script src="https://motion-on-scroll.netlify.app/mos.js"&gt;&lt;/script&gt;</code>
@@ -278,8 +281,8 @@
           <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary cta-large">Send Message</button>
-        <div id="result"></div>
+        <button type="submit" class="btn btn-primary cta-large" data-mos="fade-up">Send Message</button>
+        <div id="result" data-mos="fade-up"></div>
       </form>
     </div>
   </section>
@@ -295,7 +298,21 @@
         <a href="#features">Features</a>
         <a href="#showcase">Examples</a>
         <a href="#install">Installation</a>
-        <a href="demo.html">Demo</a>
+        <!-- <a href="demo.html">Demo</a> -->
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/hellogirish07" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/gk.suthar1/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/girish-suthar-b6786b257/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://hello-gk-18.netlify.app/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" title="Portfolio">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="footer-bottom">
         <p>© 2025 MotionOnScroll. Created with ❤️ by GK</p>
