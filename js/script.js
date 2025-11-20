@@ -161,8 +161,39 @@ if (form) {
 // Mobile menu icon toggle 
 if (changeIcon) {
   const menuBtn = document.getElementById('mobileMenuBtn');
-  menuBtn.addEventListener('click', function () {
-    changeIcon.classList.toggle('fa-bars');
-    changeIcon.classList.toggle('fa-times');
-  });
+  const navLinks = document.getElementById('navLinks');
+
+  const setHamburger = () => {
+    changeIcon.classList.add('fa-bars');
+    changeIcon.classList.remove('fa-times');
+  };
+  const setClose = () => {
+    changeIcon.classList.add('fa-times');
+    changeIcon.classList.remove('fa-bars');
+  };
+  const updateIcon = () => {
+    if (navLinks && navLinks.classList.contains('mobile-open')) setClose();
+    else setHamburger();
+  };
+
+  // Ensure icon matches initial state
+  updateIcon();
+
+  if (menuBtn) {
+    // After the other click handler toggles the menu, update the icon
+    menuBtn.addEventListener('click', () => {
+      // let the DOM toggle run first (existing handler), then sync icon
+      setTimeout(updateIcon, 0);
+    });
+  }
+
+  // Keep icon in sync if nav's class changes elsewhere (clicking links or outside)
+  if (navLinks && window.MutationObserver) {
+    const mo = new MutationObserver(updateIcon);
+    mo.observe(navLinks, { attributes: true, attributeFilter: ['class'] });
+  } else {
+    // Fallback: watch clicks that might close the menu
+    document.addEventListener('click', () => setTimeout(updateIcon, 0));
+    document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', updateIcon));
+  }
 }
